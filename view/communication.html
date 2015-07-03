@@ -1,0 +1,97 @@
+<div>
+    
+    <h2>communication</h2>
+    
+    </br>
+<!--    <form class="communication_frm">-->
+      
+        <h2>Office Contacts</h2>
+        <div >
+    <table class="table">
+        <tr>            
+            <th>Depart Name</th>            
+            <th>Contact Person</th>
+            <th>Contact Number</th>
+            
+            
+        </tr>
+        <tr ng-repeat="dept in modules.department">
+            <td><input type="text" ng-model="dept.info1"class="input-small"></td>           
+            <td><input type="number" ng-model="dept.info2" ng:required class="input-mini"></td>
+            <td><input type="number" ng-model="dept.info3" ng:required class="input-mini"></td>
+           
+            <td><a href ng:click="adddept()" class="btn btn-small"><img src="images/add.png"></a></td>
+            <td><a href ng:click="removedept($index)" ><img src="images/cancel.png"></a></td>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><label>Department Title</label><input type="text" ng-model="modules.title"></td>
+        </tr>
+       
+    </table>
+</div>
+         <h2>Wifi Details</h2>
+                <div >
+    <table class="table">
+        <tr>            
+            <th>Info1</th>            
+            <th>Info2</th>
+            <th>Info3</th>
+            
+            
+        </tr>
+        <tr ng-repeat="wifi in modules.wifidetails">
+            <td><input type="text" ng-model="wifi.info1"class="input-small"></td>           
+            <td><input type="number" ng-model="wifi.info2" ng:required class="input-mini"></td>
+            <td><input type="number" ng-model="wifi.info3" ng:required class="input-mini"></td>
+           
+            <td><a href ng:click="addwifi()" class="btn btn-small"><img src="images/add.png"></a></td>
+             <td><a href ng:click="removewifi($index)"><img src="images/cancel.png"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><label>Wifi Title</label><input type="text" ng-model="modules.wifititle"></td>
+        </tr>
+    </table>
+                    
+</div>
+          <h2>Dialing Instructions</h2>
+                <div >
+    <table class="table">
+        <tr>            
+            <th>Info1</th>            
+            <th>Info2</th>
+            <th>Info3</th>
+            
+            
+        </tr>
+        <tr ng-repeat="dial in modules.dialingdetails">
+            <td><input type="text" ng-model="dial.info1"class="input-small"></td>           
+            <td><input type="number" ng-model="dial.info2" ng:required class="input-mini"></td>
+            <td><input type="number" ng-model="dial.info3" ng:required class="input-mini"></td>
+           
+            <td><a href ng:click="adddial()" class="btn btn-small"><img src="images/add.png"></a></td>
+            <td><a href ng:click="removedial($index)"><img src="images/cancel.png"></a></td>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><label>Dialing Title</label><input type="text" ng-model="modules.dialtitle"></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Save" ng-click="saveItem()" class="btn btn-primary" />
+               
+            </td>
+           
+        </tr>
+    </table>
+                    {{modules}}
+<!--     <span ng-bind="modules.department"></span>    
+     <span ng-bind="modules.dialtitle"></span>         -->
+	 
+	 
+	   
+</div>
+<!--    </form>-->
+    
+</div>

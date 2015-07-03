@@ -1,0 +1,22 @@
+
+        a.btn.btn-default.btn-sm{
+            right: 450px;
+            top: -29px;
+        }
+        div.hours-val.ng-binding{
+            margin-left:15px;
+        }
+        div.minutes-val.ng-binding{
+            margin-left:15px;
+        }
+        div.meridian-val.ng-binding{
+            margin-left:10px;
+        }
+        div.dropdown-menu{  
+            top: 1px;
+            margin-left: 70px;
+        }
+        button.btn.btn-default{  top: 10px;
+  left: 3px;}
+    
+

@@ -1,0 +1,41 @@
+
+<div> 
+    <h2>Agenda</h2>
+    
+    </br>
+<!--    <form class="agenda_frm">-->
+
+         <select name="noOfdays"  ng-options="day for day in [1, 2, 3,4,5,6,7,8,9,10]" ng-model="agenda.noOfDays" ng-change="noOfDaysChange()"  >
+	  
+	   <option value="" selected>--Select No Of Days--</option>
+      </select>
+        
+        <div id="example" class="agenda-group" ng-repeat=" (id,subject) in agenda.agendaList "  style="margin-top: 20px;">
+
+        <input kendo-date-picker ng-model="agenda.agendaList[id].date"  k-ng-model="obj1" name="{{'agenda' + id}}"  placeholder="Date" style="width: 10%;" />       
+        </br>
+        <select name="noOfSchedules"  ng-options="schedule for schedule in [1, 2, 3,4,5,6,7,8,9,10]" ng-model="agenda.agendaList[id].noOfSchedules" ng-change="noOfSchedulesChange(id,agenda.agendaList[id].noOfSchedules)"  style="margin-top: 20px;">
+	  
+	   <option value="" selected>--Select No Of Schedules--</option>
+      </select>
+         <!--{{agenda.agendaList[id]}}-->
+        
+        <div class="schedule-group" ng-repeat=" (scheduleid,schedule) in agenda.agendaList[id].scheduleList "  style="margin-top: 20px;">
+        
+        <input name="{{'agenda' + scheduleid}}" type="text" ng-model="agenda.agendaList[id].scheduleList[scheduleid].place" required="true" placeholder="Place"/>
+        <textarea ng-model="agenda.agendaList[id].scheduleList[scheduleid].description" name="{{'agenda' + scheduleid}}" rows="5" cols="15"
+                        class="input-no-width rounded shaded left clearboth" required placeholder="Description">
+            
+        </textarea>
+        <input  kendo-time-picker id="{{'start' +id+scheduleid}}" ng-model="agenda.agendaList[id].scheduleList[scheduleid].stime" k-ng-model="obj2"  name="{{'agenda' + scheduleid}}"  placeholder="Start Time"  style="width: 10%;"/>       
+        <input kendo-time-picker id="{{'end' +id+scheduleid}}" ng-model="agenda.agendaList[id].scheduleList[scheduleid].etime"  k-ng-model="obj3" name="{{'agenda' + scheduleid}}"  placeholder="End Time" style="width: 10%;" />       
+ 
+</div>
+        
+   </div>
+
+</div>
+{{agenda}}
+       
+
+
